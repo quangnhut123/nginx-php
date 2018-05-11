@@ -1,0 +1,17 @@
+version: '2'
+
+services:
+  nginx-php-fpm:
+    image: test
+    restart: unless-stopped
+    ports:
+      - "99:80"
+    #volumes:
+      #- ./report-dashboard:/var/www/html
+    environment:
+      GIT_PERSONAL_TOKEN: 'ALjfb9SBa5sTisMkKLxw'
+      GIT_USERNAME: 'root'
+      GIT_REPO: 'git.mediastep.com/root/report-dashboard.git'
+      GIT_BRANCH: 'master'
+      GIT_EMAIL: 'root@mediastep.com'
+      GIT_NAME: 'Admin'
